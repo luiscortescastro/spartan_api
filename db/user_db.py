@@ -29,8 +29,8 @@ def get_user(useremail: str):
     for user in database_users.values():
         if user.useremail == useremail:
             return user
-        else:
-            return None
+        
+    return None
 
 def update_user(user_in_db: UserInDB):
     database_users[user_in_db.userid] = user_in_db
